@@ -10,12 +10,15 @@ public class Main {
         printInputText ();
         reverseText("abcdefg");
         reverseArray ();
-        splitTextToArray("Hallo, Wolrd,! abc,def");*/
-        getQuersumme(15021);
-
-
+        splitTextToArray("Hallo, Wolrd,! abc,def");
+        getQuersumme(15021);*/
+        numToRoman(100);
+        numToRoman(95);
+        numToRoman(34);
+        numToRoman(9);
 
     }
+
 // Intermediate
     public static void intToString () {
         /*
@@ -107,12 +110,23 @@ public class Main {
         return sum;
     }
 
-    public static String numberToRoman (int number) {
+    public static String numToRoman (int number) {
     /*
     Gib eine Ganzzahl (1-100) als römische Zahl aus (12 = XII)
      */
-
-
+        int initialNumber = number;
+        int [] values = {100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String [] romanLetters = {"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        StringBuilder roman = new StringBuilder();
+        for (int i = 0; i < values.length; i++) {
+            while (number >= values[i]){
+                number = number - values[i];
+                roman.append(romanLetters[i]);
+            }
+        }
+        String result = roman.toString();
+        System.out.println("Das römische Zaghl von " + initialNumber + " ist: " + result);
+        return result;
     }
 
 
