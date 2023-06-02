@@ -5,13 +5,13 @@ import static java.util.Arrays.sort;
 
 public class Main {
     public static void main(String[] args) {
-        /*intToString();
+        intToString();
         hundredModulo ();
         printInputText ();
         reverseText("abcdefg");
         reverseArray ();
         splitTextToArray("Hallo, Wolrd,! abc,def");
-        getQuersumme(15021);*/
+        getQuersumme(15021);
         numToRoman(100);
         numToRoman(95);
         numToRoman(34);
