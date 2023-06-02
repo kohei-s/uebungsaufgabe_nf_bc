@@ -1,16 +1,22 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+import static java.util.Arrays.sort;
+
 public class Main {
     public static void main(String[] args) {
-        intToString();
+        /*intToString();
         hundredModulo ();
+        printInputText ();
+        reverseText("abcdefg");
+        reverseArray ();
+        splitTextToArray("Hallo, Wolrd,! abc,def");*/
+        getQuersumme(15021);
+
 
 
     }
-
-    /*
-    3. Schreibe ein Programm die Wörter vom Benutzer einliest (Scanner) und diese in einem Array speichert.
-    Gib vor jeder Eingabe jeweils die eingegebenen Wörter noch
-    */
-
+// Intermediate
     public static void intToString () {
         /*
         Intermediate-Aufgabe 1:
@@ -45,8 +51,71 @@ public class Main {
         }
     }
 
+    public static void printInputText () {
+    /*
+    Intermediate-Aufgabe 3:
+    Schreibe ein Programm die Wörter vom Benutzer einliest (Scanner) und diese in einem Array speichert.
+    Gib vor jeder Eingabe jeweils die eingegebenen Wörter noch mal aus.
+    */
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Bitte Wörter eingeben:");
+    String text = scanner.nextLine();
+    String [] textListe = {text};
+    System.out.println(text);
+    }
+
+// Expert
+    public static void reverseText (String text) {
+    /*
+    Expert-Aufgabe 1:
+    Schreibe eine Methode die einen Eingabestring rückwärts ausgibt.
+    */
+        String result = "";
+        for (int i = text.length()-1; i >= 0; i--) {
+            result += String.valueOf(text.charAt(i));
+        }
+        System.out.println(result);
+    }
+
+    public static void reverseArray () {
+    /*
+    Expert-Aufgabe 2:
+    Gibt den folgenden Array aufsteigend sortiert aus: {6, 2, 8, 3, 9, 6}
+    */
+        int [] array = {6, 2, 8, 3, 9, 6};
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public static void splitTextToArray (String text) {
+    /*
+    Schreibe eine Methode die einen String nach , separiert und als Array zurück gibt.
+     */
+        System.out.println(Arrays.toString(text.split(",")));
+    }
+
+    public static int getQuersumme (int number) {
+    /*
+    Schreibe eine Methode die Quersumme einer Ganzzahl berechnet.
+     */
+        int sum = 0;
+        while (number > 0) {
+            sum += (number % 10);
+            number /= 10;
+        }
+        System.out.println(sum);
+        return sum;
+    }
+
+    public static String numberToRoman (int number) {
+    /*
+    Gib eine Ganzzahl (1-100) als römische Zahl aus (12 = XII)
+     */
+
+
+    }
+
 
 
 
 }
-
